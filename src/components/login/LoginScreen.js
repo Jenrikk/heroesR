@@ -15,8 +15,11 @@ const LoginScreen = () => {
         payload: {name: 'Enrique'}
       }
       dispatch(action);
+
+      const lastPath = localStorage.getItem('lastPath') || '/';
       
-      navigate('/', {replace: true});
+      // navigate('/', {replace: true});
+      navigate(lastPath, {replace: true});
 
   }
 
